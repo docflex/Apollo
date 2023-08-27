@@ -10,7 +10,7 @@ import SearchBarComponent from "components/NavbarComponents/SearchBar";
 import ToggleModesComponent from "components/NavbarComponents/ToggleModes";
 import SettingsIconComponent from "components/NavbarComponents/SettingsIcon";
 
-function Navbar() {
+function Navbar({ isSidebarOpen, setIsSidebarOpen }) {
     const theme = useTheme();
 
     return (
@@ -25,7 +25,10 @@ function Navbar() {
                 {/* LEFT SIDE OF THE NAVBAR */}
                 <FlexBetween>
                     {/* MENU ICON COMPONENT */}
-                    <MenuIconComponent />
+                    <MenuIconComponent
+                        isSidebarOpen={isSidebarOpen}
+                        setIsSidebarOpen={setIsSidebarOpen}
+                    />
                     {/* SEARCH BAR COMPONENT */}
                     <SearchBarComponent
                         backgroundColor={theme.palette.background.alt}

@@ -1,6 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import IconButton from "@mui/material/IconButton";
+import { IconButton } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { setMode } from "state"; // Import the Redux action
 import { DarkModeOutlined, LightModeOutlined } from "@mui/icons-material";

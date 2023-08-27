@@ -13,7 +13,7 @@ const setModeReducer = (state) => {
 // Create a slice using createSlice function
 export const globalSlice = createSlice({
     name: "global", // Name of the slice
-    initialState,  // Initial state for the slice
+    initialState, // Initial state for the slice
     reducers: {
         setMode: setModeReducer, // Use the defined reducer function
     },

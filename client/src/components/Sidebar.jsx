@@ -126,6 +126,7 @@ function Sidebar({ user, isNonMobile, drawerWidth, isSidebarOpen, setIsSidebarOp
                     }}
                 >
                     <Box width="100%">
+                        {/* SIDEBAR HEADER */}
                         <SidebarHeader
                             isNonMobile={isNonMobile}
                             isSidebarOpen={isSidebarOpen}
@@ -157,6 +158,7 @@ function Sidebar({ user, isNonMobile, drawerWidth, isSidebarOpen, setIsSidebarOp
                             })}
                         </List>
                     </Box>
+                    {/* USER PROFILE + SETTINGS */}
                     <Box position="absolute" bottom="2rem">
                         <Divider />
                         <SidebarProfile user={user} />

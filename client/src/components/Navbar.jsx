@@ -1,6 +1,16 @@
 import React, { useState } from "react";
 import FlexBetween from "components/Utils/FlexBetween";
-import { AppBar, Button, Toolbar, useTheme, Box, Typography, Menu, MenuItem } from "@mui/material";
+import {
+    AppBar,
+    Button,
+    Toolbar,
+    useTheme,
+    Box,
+    Typography,
+    Menu,
+    MenuItem,
+    Slide,
+} from "@mui/material";
 
 // Left Side Components of the Navbar
 import MenuIconComponent from "components/NavbarComponents/MenuIcon";
@@ -43,7 +53,7 @@ function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
                     <ToggleModesComponent />
                     {/* SETTINGS BUTTON */}
                     <SettingsIconComponent />
-                    {/* USER PROFILE */}
+                    {/* USER PROFILE DROPDOWN */}
                     <ProfileDropdown user={user} />
                 </FlexBetween>
             </Toolbar>

@@ -31,7 +31,7 @@ import {
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import FlexBetween from "components/Utils/FlexBetween";
-// import profileImage from "assets/profileImage.jpeg";
+import profileImage from "assets/profileImage.JPG";
 
 import SidebarHeader from "components/SidebarComponents/SidebarHeader";
 import SidebarCategory from "components/SidebarComponents/SidebarCategory";

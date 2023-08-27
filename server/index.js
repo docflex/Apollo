@@ -20,6 +20,13 @@ import managementRoutes from "./routes/management.js";
 import salesRoutes from "./routes/sales.js";
 
 /*=============================================
+=            ADDING DATA TO MONGO            =
+=============================================*/
+
+import User from "./models/User.js";
+import { dataUser } from "./data/index.js";
+
+/*=============================================
 =        ADDING SERVER CONFIGURATIONS        =
 =============================================*/
 
@@ -56,5 +63,7 @@ mongoose
     })
     .then(() => {
         app.listen(PORT, () => console.log(`Server Port: ${PORT}`));
+        /* ONLY RUN THE BELOW CODE ONCE */
+        // User.insertMany(dataUser);
     })
     .catch((error) => console.log(`Did Not Connect. Reason ${error}`));

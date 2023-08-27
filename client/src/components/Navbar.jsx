@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import FlexBetween from "components/Utils/FlexBetween";
-import { AppBar, Toolbar, useTheme } from "@mui/material";
+import { AppBar, Button, Toolbar, useTheme, Box, Typography, Menu, MenuItem } from "@mui/material";
 
 // Left Side Components of the Navbar
 import MenuIconComponent from "components/NavbarComponents/MenuIcon";
@@ -9,8 +9,9 @@ import SearchBarComponent from "components/NavbarComponents/SearchBar";
 // Right Side Components of the Navbar
 import ToggleModesComponent from "components/NavbarComponents/ToggleModes";
 import SettingsIconComponent from "components/NavbarComponents/SettingsIcon";
+import ProfileDropdown from "components/NavbarComponents/ProfileDropdown";
 
-function Navbar({ isSidebarOpen, setIsSidebarOpen }) {
+function Navbar({ user, isSidebarOpen, setIsSidebarOpen }) {
     const theme = useTheme();
 
     return (
@@ -42,6 +43,8 @@ function Navbar({ isSidebarOpen, setIsSidebarOpen }) {
                     <ToggleModesComponent />
                     {/* SETTINGS BUTTON */}
                     <SettingsIconComponent />
+                    {/* USER PROFILE */}
+                    <ProfileDropdown user={user} />
                 </FlexBetween>
             </Toolbar>
         </AppBar>

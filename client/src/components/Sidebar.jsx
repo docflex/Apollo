@@ -3,19 +3,19 @@ import {
     Box,
     Divider,
     Drawer,
-    IconButton,
+    // IconButton,
     List,
-    ListItem,
-    ListItemButton,
-    ListItemIcon,
-    ListItemText,
+    // ListItem,
+    // ListItemButton,
+    // ListItemIcon,
+    // ListItemText,
     Typography,
     useTheme,
 } from "@mui/material";
 import {
-    SettingsOutlined,
-    ChevronLeft,
-    ChevronRightOutlined,
+    // SettingsOutlined,
+    // ChevronLeft,
+    // ChevronRightOutlined,
     HomeOutlined,
     ShoppingCartOutlined,
     Groups2Outlined,
@@ -30,11 +30,12 @@ import {
 } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import FlexBetween from "components/Utils/FlexBetween";
-import profileImage from "assets/profileImage.JPG";
+// import FlexBetween from "components/Utils/FlexBetween";
+// import profileImage from "assets/profileImage.JPG";
 
 import SidebarHeader from "components/SidebarComponents/SidebarHeader";
 import SidebarCategory from "components/SidebarComponents/SidebarCategory";
+import SidebarProfile from "components/SidebarComponents/SidebarProfile";
 
 const navItems = [
     {
@@ -95,7 +96,7 @@ const navItems = [
     },
 ];
 
-function Sidebar({ isNonMobile, drawerWidth, isSidebarOpen, setIsSidebarOpen }) {
+function Sidebar({ user, isNonMobile, drawerWidth, isSidebarOpen, setIsSidebarOpen }) {
     const { pathname } = useLocation();
     const [active, setActive] = useState("");
     const navigate = useNavigate();
@@ -155,6 +156,10 @@ function Sidebar({ isNonMobile, drawerWidth, isSidebarOpen, setIsSidebarOpen }) 
                                 );
                             })}
                         </List>
+                    </Box>
+                    <Box position="absolute" bottom="2rem">
+                        <Divider />
+                        <SidebarProfile user={user} />
                     </Box>
                 </Drawer>
             )}

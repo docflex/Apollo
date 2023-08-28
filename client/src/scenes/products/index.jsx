@@ -41,7 +41,7 @@ const Products = () => {
                     )}
                 </Box>
             ) : (
-                <ProductsLoader/>
+                <ProductsLoader />
             )}
         </Box>
     );

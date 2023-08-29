@@ -159,7 +159,7 @@ function Sidebar({ user, isNonMobile, drawerWidth, isSidebarOpen, setIsSidebarOp
                         </List>
                     </Box>
                     {/* USER PROFILE + SETTINGS */}
-                    <Box position="absolute" bottom="2rem">
+                    <Box bottom="2rem">
                         <Divider />
                         <SidebarProfile user={user} />
                     </Box>

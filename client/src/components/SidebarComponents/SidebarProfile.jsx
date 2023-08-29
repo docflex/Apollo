@@ -8,7 +8,7 @@ function SidebarProfile({ user }) {
     const theme = useTheme();
 
     return (
-        <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 0 3rem">
+        <FlexBetween textTransform="none" gap="1rem" m="1.5rem 2rem 1rem 2rem">
             <Box
                 component="img"
                 alt="profile"
@@ -18,7 +18,7 @@ function SidebarProfile({ user }) {
                 borderRadius="50%"
                 sx={{ objectFit: "cover" }}
             />
-            <Box textAlign="left">
+            <Box textAlign="left" m="0 0 0 -1rem">
                 <Typography
                     fontWeight="bold"
                     fontSize="0.9rem"

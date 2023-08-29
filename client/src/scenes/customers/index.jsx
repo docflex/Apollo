@@ -57,7 +57,8 @@ const Customers = () => {
             <Header title="CUSTOMERS" subtitle="List of Customers" />
             {data || !isLoading ? (
                 <Box
-                    mt="40px"
+                    mt="20px"
+                    display="grid"
                     height="75vh"
                     sx={{
                         "& .MuiDataGrid-root": {

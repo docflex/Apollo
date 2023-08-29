@@ -25,7 +25,7 @@ const Product = ({ _id, name, description, price, rating, category, supply, stat
         >
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color={theme.palette.secondary[700]} gutterBottom>
-                    {category}
+                    {category.toUpperCase()}
                 </Typography>
                 <Typography variant="h5" component="div">
                     {name}
@@ -33,13 +33,13 @@ const Product = ({ _id, name, description, price, rating, category, supply, stat
                 <Typography sx={{ mb: "1.5rem" }} color={theme.palette.secondary[400]}>
                     ${Number(price).toFixed(2)}
                 </Typography>
-                <Rating value={rating} readOnly />
+                <Rating defaultValue={2.5} precision={0.5} value={rating} readOnly />
 
                 <Typography variant="body2">{description}</Typography>
             </CardContent>
             <CardActions>
                 <Button variant="primary" size="small" onClick={() => setIsExpanded(!isExpanded)}>
-                    See More
+                    {!isExpanded ? "See More" : "Minimize"}
                 </Button>
             </CardActions>
             <Collapse

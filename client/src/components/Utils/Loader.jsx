@@ -1,7 +1,7 @@
 import React from "react";
 import { CircularProgress, Typography, Box, useTheme } from "@mui/material";
 
-function ProductsLoader() {
+function Loader({ loadingText }) {
     const theme = useTheme();
     return (
         <Box
@@ -18,10 +18,10 @@ function ProductsLoader() {
                 }}
             />
             <Typography variant="h5" color={theme.palette.secondary[300]} mt={3}>
-                Loading Products...
+                Loading {loadingText} Data...
             </Typography>
         </Box>
     );
 }
 
-export default ProductsLoader;
+export default Loader;

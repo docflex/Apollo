@@ -4,7 +4,7 @@ import Header from "components/Header";
 import { useGetProductsQuery } from "state/api";
 
 import Product from "components/ProductsComponents/Product";
-import ProductsLoader from "components/ProductsComponents/ProductsLoader";
+import Loader from "components/Utils/Loader";
 
 const Products = () => {
     const { data, isLoading } = useGetProductsQuery();
@@ -41,7 +41,7 @@ const Products = () => {
                     )}
                 </Box>
             ) : (
-                <ProductsLoader />
+                <Loader loadingText="Product" />
             )}
         </Box>
     );

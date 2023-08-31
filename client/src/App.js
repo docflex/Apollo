@@ -9,7 +9,7 @@ import Dashboard from "scenes/dashboard";
 import Products from "scenes/products";
 import Customers from "scenes/customers";
 import Transactions from "scenes/transactions";
-import Geography from "scenes/geography"
+import Geography from "scenes/geography";
 
 function App() {
     const mode = useSelector((state) => state.global.mode);

@@ -2,12 +2,13 @@ import React from "react";
 import { ResponsivePie } from "@nivo/pie";
 import { Box, Typography, useTheme } from "@mui/material";
 import { useGetSalesQuery } from "state/api";
+import Loader from "./Utils/Loader";
 
 const BreakdownChart = ({ isDashboard = false }) => {
     const { data, isLoading } = useGetSalesQuery();
     const theme = useTheme();
 
-    if (!data || isLoading) return "Loading...";
+    if (!data || isLoading) return <Loader loadingText="Breakdown Chart" />;
 
     const colors = [
         theme.palette.secondary[500],
@@ -93,7 +94,7 @@ const BreakdownChart = ({ isDashboard = false }) => {
                         anchor: "bottom",
                         direction: "row",
                         justify: false,
-                        translateX: isDashboard ? 20 : 0,
+                        translateX: isDashboard ? 25 : 0,
                         translateY: isDashboard ? 50 : 56,
                         itemsSpacing: 0,
                         itemWidth: 85,

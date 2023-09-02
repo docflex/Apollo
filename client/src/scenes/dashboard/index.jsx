@@ -8,6 +8,7 @@ import BreakdownChart from "components/BreakdownChart";
 import OverviewChart from "components/OverviewChart";
 import { useGetDashboardQuery } from "state/api";
 import StatBox from "components/StatBox";
+import Loader from "components/Utils/Loader";
 
 const Dashboard = () => {
     const theme = useTheme();
@@ -48,7 +49,7 @@ const Dashboard = () => {
     return (
         <Box m="1.5rem 2.5rem">
             <FlexBetween>
-                <Header title="DASHBOARD" subtitle="Welcome to your dashboard" />
+                <Header title="DASHBOARD" subtitle="Here is Your Analytics Dashboard" />
 
                 <Box>
                     <Button
@@ -153,12 +154,18 @@ const Dashboard = () => {
                         },
                     }}
                 >
-                    <DataGrid
-                        loading={isLoading || !data}
-                        getRowId={(row) => row._id}
-                        rows={(data && data.transactions) || []}
-                        columns={columns}
-                    />
+                    {data ? (
+                        <DataGrid
+                            loading={isLoading || !data}
+                            getRowId={(row) => row._id}
+                            rows={(data && data.transactions) || []}
+                            columns={columns}
+                        />
+                    ) : (
+                        <Box marginTop="25vh">
+                            <Loader loadingText="Transactions" />
+                        </Box>
+                    )}
                 </Box>
                 <Box
                     gridColumn="span 4"

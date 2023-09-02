@@ -5,21 +5,39 @@ function Loader({ loadingText }) {
     const theme = useTheme();
     return (
         <Box
-            display="flex"
+            display="grid"
             flexDirection="column"
             alignItems="center"
             justifyContent="center"
-            height="75vh"
+            height="100%"
         >
-            <CircularProgress
-                size={80}
-                sx={{
-                    color: theme.palette.secondary[100],
-                }}
-            />
-            <Typography variant="h5" color={theme.palette.secondary[300]} mt={3}>
-                Loading {loadingText} Data...
-            </Typography>
+            <Box
+                display="grid"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+                height="100%"
+                marginTop="10%"
+            >
+                <CircularProgress
+                    size={80}
+                    sx={{
+                        color: theme.palette.secondary[100],
+                    }}
+                />
+            </Box>
+            <Box
+                display="block"
+                flexDirection="column"
+                alignItems="center"
+                justifyContent="center"
+                height="100%"
+                marginTop="10%"
+            >
+                <Typography variant="h5" color={theme.palette.secondary[300]} mt={3}>
+                    Loading {loadingText} Data...
+                </Typography>
+            </Box>
         </Box>
     );
 }

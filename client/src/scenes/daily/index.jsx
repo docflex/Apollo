@@ -196,7 +196,9 @@ const Daily = () => {
                         ]}
                     />
                 ) : (
-                    <Loader loadingText="Daily" />
+                    <Box height="100vh">
+                        <Loader loadingText="Daily" />
+                    </Box>
                 )}
             </Box>
         </Box>

@@ -93,7 +93,9 @@ const Customers = () => {
                     />
                 </Box>
             ) : (
-                <Loader loadingText="Customer" />
+                <Box height="100vh">
+                    <Loader loadingText="Customer" />
+                </Box>
             )}
         </Box>
     );

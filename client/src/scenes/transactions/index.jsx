@@ -110,7 +110,9 @@ const Transactions = () => {
                     />
                 </Box>
             ) : (
-                <Loader loadingText="Transaction" />
+                <Box height="100vh">
+                    <Loader loadingText="Transactions" />
+                </Box>
             )}
         </Box>
     );

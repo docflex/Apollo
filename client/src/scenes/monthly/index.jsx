@@ -141,7 +141,9 @@ const Monthly = () => {
                         ]}
                     />
                 ) : (
-                    <Loader loadingText="Monthly" />
+                    <Box height="100vh">
+                        <Loader loadingText="Monthly" />
+                    </Box>
                 )}
             </Box>
         </Box>

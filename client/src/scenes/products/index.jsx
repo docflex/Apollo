@@ -41,7 +41,9 @@ const Products = () => {
                     )}
                 </Box>
             ) : (
-                <Loader loadingText="Product" />
+                <Box height="100vh">
+                    <Loader loadingText="Product" />
+                </Box>
             )}
         </Box>
     );

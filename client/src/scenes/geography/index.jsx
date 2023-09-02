@@ -94,7 +94,9 @@ const Geography = () => {
                         ]}
                     />
                 ) : (
-                    <Loader loadingText="Geogrpahy" />
+                    <Box height="100vh">
+                        <Loader loadingText="Geography" />
+                    </Box>
                 )}
             </Box>
         </Box>

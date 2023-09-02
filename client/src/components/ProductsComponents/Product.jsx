@@ -13,7 +13,7 @@ import {
 const Product = ({ _id, name, description, price, rating, category, supply, stat }) => {
     const theme = useTheme();
     const [isExpanded, setIsExpanded] = useState(false);
-    console.log(stat[0].yearlySalesTotal);
+    // console.log(stat[0].yearlySalesTotal);
 
     return (
         <Card

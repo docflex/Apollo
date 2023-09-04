@@ -23,7 +23,7 @@ const Transactions = () => {
         search,
     });
 
-    console.log("data", data);
+    // console.log("data", data);
 
     const columns = [
         {

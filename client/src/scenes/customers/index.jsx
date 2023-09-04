@@ -9,7 +9,7 @@ import Loader from "components/Utils/Loader";
 const Customers = () => {
     const theme = useTheme();
     const { data, isLoading } = useGetCustomersQuery();
-    console.log("data", data);
+    // console.log("data", data);
 
     const columns = [
         {

@@ -133,30 +133,35 @@ function Sidebar({ user, isNonMobile, drawerWidth, isSidebarOpen, setIsSidebarOp
                             setIsSidebarOpen={setIsSidebarOpen}
                         />
                         {/* LIST ALL THE ITEMS IN THE NAVBAR */}
-                        <List>
-                            {navItems.map(({ text, icon }) => {
-                                if (!icon) {
+                        <Box marginTop="-2rem">
+                            <List>
+                                {navItems.map(({ text, icon }) => {
+                                    if (!icon) {
+                                        return (
+                                            <Typography
+                                                key={text}
+                                                sx={{ m: "2.25rem 0 1rem 3rem" }}
+                                            >
+                                                {text}
+                                            </Typography>
+                                        );
+                                    }
+                                    const lowerCaseText = text.toLowerCase();
                                     return (
-                                        <Typography key={text} sx={{ m: "2.25rem 0 1rem 3rem" }}>
-                                            {text}
-                                        </Typography>
+                                        <SidebarCategory
+                                            key={text}
+                                            text={text}
+                                            icon={icon}
+                                            isActive={active === lowerCaseText}
+                                            onClick={() => {
+                                                navigate(`/${lowerCaseText}`);
+                                                setActive(lowerCaseText);
+                                            }}
+                                        />
                                     );
-                                }
-                                const lowerCaseText = text.toLowerCase();
-                                return (
-                                    <SidebarCategory
-                                        key={text}
-                                        text={text}
-                                        icon={icon}
-                                        isActive={active === lowerCaseText}
-                                        onClick={() => {
-                                            navigate(`/${lowerCaseText}`);
-                                            setActive(lowerCaseText);
-                                        }}
-                                    />
-                                );
-                            })}
-                        </List>
+                                })}
+                            </List>
+                        </Box>
                     </Box>
                     {/* USER PROFILE + SETTINGS */}
                     <Box bottom="2rem">
